@@ -1,0 +1,6 @@
+#!/bin/sh
+echo "making work directory backup..."
+
+#time tar cvf - work/* | pigz -9v > work.tar.gz
+tar cvf - work/* | pigz -9v > work.tar.gz
+rm -rv work
